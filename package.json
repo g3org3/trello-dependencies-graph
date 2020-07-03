@@ -1,0 +1,26 @@
+{
+  "name": "trello-dependencies-graph",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "cp example.env .env",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "generate-tree": "node src/generate-tree.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g3org3/trello-dependencies-graph.git"
+  },
+  "keywords": [],
+  "author": "George <7jagjag@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/g3org3/trello-dependencies-graph/issues"
+  },
+  "homepage": "https://github.com/g3org3/trello-dependencies-graph#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
