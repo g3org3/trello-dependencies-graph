@@ -10,11 +10,45 @@
     />
     <script src="https://fperucic.github.io/treant-js/vendor/raphael.js"></script>
     <script src="https://fperucic.github.io/treant-js/Treant.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://trello.com/1/client.js?key=31b5526bbf196059fa1a87ac7a4b2348"></script>
     <link rel="stylesheet" href="no-parent.css" />
   </head>
   <body>
     <h1>Trello Dependency Graph</h1>
     <div class="chart" id="OrganiseChart1"></div>
     <script src="main.js"></script>
+    <a id="trello">
+      trello
+    </a>
+    <script>
+      var authenticationSuccess = function () {
+        console.log("Successful authentication");
+      };
+
+      var authenticationFailure = function () {
+        console.log("Failed authentication");
+      };
+
+      function authenticate() {
+        window.Trello.authorize({
+          type: "popup",
+          name: "Getting Started Application",
+          scope: {
+            read: "true",
+            write: "true",
+          },
+          expiration: "never",
+          success: authenticationSuccess,
+          error: authenticationFailure,
+        });
+      }
+
+      document.getElementById("trello").onclick = authenticate;
+    </script>
   </body>
 </html>
