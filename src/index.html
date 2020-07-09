@@ -15,37 +15,9 @@
     <script src="https://trello.com/1/client.js?key=31b5526bbf196059fa1a87ac7a4b2348"></script>
     <link rel="stylesheet" href="no-parent.css" />
   </head>
-  <body>
+  <body id="root">
     <h1>Trello Dependency Graph</h1>
+    <script src="auth.js"></script>
     <div class="chart" id="OrganiseChart1"></div>
-    <script src="main.js"></script>
-    <a id="trello">
-      trello
-    </a>
-    <script>
-      var authenticationSuccess = function () {
-        console.log("Successful authentication");
-      };
-
-      var authenticationFailure = function () {
-        console.log("Failed authentication");
-      };
-
-      function authenticate() {
-        window.Trello.authorize({
-          type: "popup",
-          name: "Getting Started Application",
-          scope: {
-            read: "true",
-            write: "true",
-          },
-          expiration: "never",
-          success: authenticationSuccess,
-          error: authenticationFailure,
-        });
-      }
-
-      document.getElementById("trello").onclick = authenticate;
-    </script>
   </body>
 </html>
