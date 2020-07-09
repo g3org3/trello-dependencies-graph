@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trello Dependency Graph</title>
-    <link
-      rel="stylesheet"
-      href="https://fperucic.github.io/treant-js/Treant.css"
-    />
+    <link rel="stylesheet" href="Treant.css" />
     <script src="https://fperucic.github.io/treant-js/vendor/raphael.js"></script>
-    <script src="https://fperucic.github.io/treant-js/Treant.js"></script>
+    <script src="Treant.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://trello.com/1/client.js?key=31b5526bbf196059fa1a87ac7a4b2348"></script>
     <link rel="stylesheet" href="no-parent.css" />
   </head>
-  <body>
+  <body id="root">
     <h1>Trello Dependency Graph</h1>
+    <script src="auth.js"></script>
     <div class="chart" id="OrganiseChart1"></div>
-    <script src="main.js"></script>
   </body>
 </html>
