@@ -73,7 +73,6 @@ body {
 .chart {
   height: 670px;
   margin: 5px;
-  width: 900px;
 }
 .Treant > .node {
 }
@@ -98,6 +97,7 @@ body {
   width: 200px;
   font-family: Tahoma;
   font-size: 12px;
+  word-break: break-word;
 }
 
 .nodeExample1 img {
